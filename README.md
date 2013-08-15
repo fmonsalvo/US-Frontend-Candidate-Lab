@@ -39,4 +39,7 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
 ## Improve semantic structure and content of the HTML + CSS
 * Decided not to add support for rounded borders for < IE9 because it is only required for the buttons
 * Added favicon apple-icon-touch from polaroid web site
-*
+
+## Incorporate missing design elements (per psd)
+* Added the two missing pics. Exported as png to get the transparency for responsive (different width)
+* Added box-shadow for the invitation

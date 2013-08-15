@@ -218,6 +218,16 @@ img {
     left: 32.813em;
     top: 0.563em;
 }
+#shoe {
+    bottom: 0;
+    left: 45em;
+    z-index: 1;
+}
+#corner {
+    bottom: 1.875em;
+    right: 0;
+    z-index: 2;
+}
 
 #invitation {
     background-color: #fff;
@@ -227,6 +237,7 @@ img {
     position: absolute;
     width: 36.188em;
     z-index: 3;
+    box-shadow: 1px 6px 4px 4px rgba(0, 0, 0, 0.40);
 }
 #invitation h1 {
     font-size: 1.875em;
