@@ -36,6 +36,5 @@ Submit a pull request when you are finished and satisfied with your work.
 
 Use this area to communicate any thought processes, ideas, or challenges you encountered.
 
-*
-*
-*
+## Improve semantic structure and content of the HTML + CSS
+* Decided not to add support for rounded borders for < IE9 because it is only required for the buttons
