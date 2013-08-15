@@ -38,3 +38,5 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
 
 ## Improve semantic structure and content of the HTML + CSS
 * Decided not to add support for rounded borders for < IE9 because it is only required for the buttons
+* Added favicon apple-icon-touch from polaroid web site
+*
