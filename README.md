@@ -47,3 +47,4 @@ Use this area to communicate any thought processes, ideas, or challenges you enc
 #Creation of RSVP message
 * Added a div element to present feedback to the user.
 * Added JavaScript to handle the user response to the RSVP. A spinner is shown inside the clicked button. The spinner is shown for 2 seconds and then hidden. Then, a message is shown to confirm the user the result of the action
+* Progresive Enhancement: if the user has disabled JavaScript, then she is redirected to a success or reject page 
