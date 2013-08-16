@@ -1,4 +1,6 @@
 $(function() {
+  var acceptBtn = $('.js-accept');
+  var rejectBtn = $('.js-reject');
 
   function onClick(e) {
     var button = $(e.currentTarget);
@@ -9,12 +11,12 @@ $(function() {
 
     $('.rspv-message').hide();
 
-    $('.js-accept')
+    acceptBtn
       .attr('disabled', accepted)
       .toggleClass('selected', accepted)
       .toggleClass('loading', accepted);
 
-    $('.js-reject')
+    rejectBtn
       .attr('disabled', !accepted)
       .toggleClass('selected', !accepted)
       .toggleClass('loading', !accepted);
@@ -29,7 +31,7 @@ $(function() {
     }, 2000);
   }
 
-  $('.js-accept').click(onClick);
-  $('.js-reject').click(onClick);
+  acceptBtn.click(onClick);
+  rejectBtn.click(onClick);
 
 });
