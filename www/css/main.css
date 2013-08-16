@@ -235,7 +235,7 @@ img {
     padding: 1.688em 8.063em 1.813em 1.813em;
     position: absolute;
     width: 46em;
-    z-index: 3;
+    z-index: 8;
     box-shadow: 1px 6px 4px 4px rgba(0, 0, 0, 0.40);
     box-sizing: border-box;
 }
@@ -254,6 +254,7 @@ img {
     padding: 0.938em 2em;
     text-align: center;
     border: 0;
+    margin-bottom: 6px;
 }
 
 .invitation-button:hover, .invitation-button.selected {
