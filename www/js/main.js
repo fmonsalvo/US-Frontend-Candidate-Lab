@@ -3,6 +3,7 @@ $(function() {
   var rejectBtn = $('.js-reject');
 
   function onClick(e) {
+    e.preventDefault();
     var button = $(e.currentTarget);
     var accepted = button.hasClass('js-accept');
     var message = accepted ?
