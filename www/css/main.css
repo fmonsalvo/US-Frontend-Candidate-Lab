@@ -203,25 +203,30 @@ body {
 img {
     position: absolute;
 }
+
 #title {
     left: 1.063em;
     top: 1.563em;
     z-index: 2;
 }
+
 #description {
     left: 16.188em;
     top: 4.188em;
     z-index: 1;
 }
+
 #date {
     left: 32.813em;
     top: 0.563em;
 }
+
 #shoe {
     bottom: 0;
     left: 45em;
     z-index: 1;
 }
+
 #corner {
     bottom: 1.875em;
     right: 0;
@@ -240,6 +245,7 @@ img {
     box-sizing: border-box;
     margin-top: 262px;
 }
+
 #invitation h1 {
     font-size: 1.875em;
     margin-bottom: 0.5em;
@@ -311,17 +317,21 @@ img {
         left: 2.5%;
         width: 40%;
     }
+
     #description {
         left: 40%;
         width: 40%;
     }
+
     #date {
         left: 60%;
         width: 40%;
     }
+
     #shoe, #corner {
         display: none;
     }
+
     #invitation {
         width: 100%;
         padding: 1.8em;
