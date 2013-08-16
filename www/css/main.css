@@ -238,6 +238,7 @@ img {
     z-index: 8;
     box-shadow: 1px 6px 4px 4px rgba(0, 0, 0, 0.40);
     box-sizing: border-box;
+    margin-top: 262px;
 }
 #invitation h1 {
     font-size: 1.875em;
@@ -291,6 +292,13 @@ img {
    Theses examples override the primary ('mobile fimage-replacest') styles.
    Modify as content requimage-replacees.
    ========================================================================== */
+
+@media only screen and (max-height: 37.5em) {
+    #invitation {
+        bottom: inherit;
+    }
+}
+
 @media only screen and (max-width: 50em) {
     #date {
         left: 65%;
