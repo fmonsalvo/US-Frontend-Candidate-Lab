@@ -194,15 +194,14 @@ textarea {
    Default Screen styles.
    ========================================================================== */
 
-body { 
-    background: url(../img/woodgrain.jpg) repeat; 
+body {
+    background: url(../img/woodgrain.jpg) repeat;
     font-family: "Helvetica", "Arial", sans-serif;
-    height: 37.5em;
-    width: 55.5em;
+    overflow-x: hidden;
 }
 
-img { 
-    position: absolute; 
+img {
+    position: absolute;
 }
 #title {
     left: 1.063em;
@@ -235,9 +234,10 @@ img {
     left: 0;
     padding: 1.688em 8.063em 1.813em 1.813em;
     position: absolute;
-    width: 36.188em;
+    width: 46em;
     z-index: 3;
     box-shadow: 1px 6px 4px 4px rgba(0, 0, 0, 0.40);
+    box-sizing: border-box;
 }
 #invitation h1 {
     font-size: 1.875em;
@@ -249,7 +249,7 @@ img {
     border-radius: 3px;
     display: inline-block;
     margin-right: 1.250em;
-    padding: 0.938em;
+    padding: 0.938em 2em;
     text-align: center;
     border: 0;
 }
@@ -263,9 +263,33 @@ img {
    Theses examples override the primary ('mobile fimage-replacest') styles.
    Modify as content requimage-replacees.
    ========================================================================== */
+@media only screen and (max-width: 50em) {
+    #date {
+        left: 65%;
+        z-index: 4;
+    }
+}
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 40em) {
+    #title {
+        left: 2.5%;
+        width: 40%;
+    }
+    #description {
+        left: 40%;
+        width: 40%;
+    }
+    #date {
+        left: 60%;
+        width: 40%;
+    }
+    #shoe, #corner {
+        display: none;
+    }
+    #invitation {
+        width: 100%;
+        padding: 1.8em;
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
