@@ -1,14 +1,15 @@
-$(function() {
-  var acceptBtn = $('.js-accept');
-  var rejectBtn = $('.js-reject');
+$(function () {
+  'use strict';
+  var acceptBtn = $('.js-accept'),
+    rejectBtn = $('.js-reject');
 
   function onClick(e) {
     e.preventDefault();
-    var button = $(e.currentTarget);
-    var accepted = button.hasClass('js-accept');
-    var message = accepted ?
-      'You have accepted this invitation' :
-      'You have rejected this invitation';
+    var button = $(e.currentTarget),
+      accepted = button.hasClass('js-accept'),
+      message = accepted ?
+          'You have accepted this invitation' :
+          'You have rejected this invitation';
 
     $('.rspv-message').hide();
 
@@ -22,11 +23,11 @@ $(function() {
       .toggleClass('selected', !accepted)
       .toggleClass('loading', !accepted);
 
-    setTimeout(function() {
+    setTimeout(function () {
       $('.rspv-message')
-      .text(message)
-      .removeClass('hidden')
-      .show();
+        .text(message)
+        .removeClass('hidden')
+        .show();
 
       $('.invitation-button').removeClass('loading');
     }, 2000);
