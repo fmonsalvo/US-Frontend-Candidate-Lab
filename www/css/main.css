@@ -101,8 +101,12 @@ textarea {
     background-color: transparent;
     border: 0;
     overflow: hidden;
+}
+
+.lt-ie8 .image-replace {
     /* IE 6/7 fallback */
-    *text-indent: -9999px;
+    direction: ltr;
+    text-indent: -9999px;
 }
 
 .image-replace:before {
@@ -186,8 +190,8 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-.clearfix {
-    *zoom: 1;
+.lt-ie8 .clearfix {
+    zoom: 1;
 }
 
 /* ==========================================================================
@@ -200,93 +204,114 @@ body {
     overflow-x: hidden;
 }
 
-img {
+.card {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    direction: ltr;
     position: absolute;
+    text-indent: -9999px;
 }
 
-#title {
+.card-title {
+    background-image: url(../img/card-title.png);
+    height: 290px;
     left: 1.063em;
     top: 1.563em;
+    width: 265px;
     z-index: 2;
 }
 
-#description {
+.card-description {
+    background-image: url(../img/card-description.png);
+    height: 288px;
     left: 16.188em;
     top: 4.188em;
+    width: 263px;
     z-index: 1;
 }
 
-#date {
+.card-date {
+    background-image: url(../img/card-date.png);
+    height: 295px;
     left: 32.813em;
     top: 0.563em;
+    width: 271px;
 }
 
-#shoe {
+.card-shoe {
+    background-image: url(../img/card-shoe.png);
     bottom: 0;
+    height: 134px;
     left: 45em;
     z-index: 1;
+    width: 150px;
 }
 
-#corner {
+.card-corner {
+    background-image: url(../img/card-corner.png);
     bottom: 1.875em;
+    height: 244px;
     right: 0;
     z-index: 2;
+    width: 63px;
 }
 
-#invitation {
+.invitation {
     background-color: #fff;
     bottom: 0;
+    box-sizing: border-box;
+    box-shadow: 1px 6px 4px 4px rgba(0, 0, 0, 0.40);
     left: 0;
+    margin-top: 262px;
     padding: 1.688em 8.063em 1.813em 1.813em;
     position: absolute;
     width: 46em;
     z-index: 8;
-    box-shadow: 1px 6px 4px 4px rgba(0, 0, 0, 0.40);
-    box-sizing: border-box;
-    margin-top: 262px;
 }
 
-#invitation h1 {
+h1 {
     font-size: 1.875em;
     margin-bottom: 0.5em;
 }
 
 .invitation-button {
     background-color: #393939;
-    text-decoration: none;
-    color: #fff;
+    border: 0;
     border-radius: 3px;
+    color: #fff;
     display: inline-block;
+    margin-bottom: 6px;
     margin-right: 1.250em;
     padding: 0.938em 2em;
     text-align: center;
-    border: 0;
-    margin-bottom: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.invitation-button:hover, .invitation-button.selected {
+.invitation-button:hover,
+.invitation-button.selected {
     background-color: #f78b36;
 }
 
 .rspv-message {
-    width: 100%;
-    height: 20%;
-    padding: 5px 12px;
-    margin-bottom: 12px;
     background: rgb(247, 139, 54);
-    box-sizing: border-box;
     border-radius: 4px;
+    box-sizing: border-box;
     color: #FFF;
+    height: 20%;
+    margin-bottom: 12px;
+    padding: 5px 12px;
+    width: 100%;
 }
 
 .spinner {
     background: url('../img/spinner.gif') no-repeat;
     background-size: 16px;
-    width: 16px;
-    height: 16px;
-    float: left;
-    margin-right: 6px;
     display: none;
+    float: left;
+    height: 16px;
+    margin-right: 6px;
+    width: 16px;
 }
 
 .loading .spinner {
@@ -300,45 +325,41 @@ img {
    ========================================================================== */
 
 @media only screen and (max-height: 37.5em) {
-    #invitation {
+    .invitation {
         bottom: inherit;
     }
 }
 
 @media only screen and (max-width: 50em) {
-    #date {
+    .card-date {
         left: 65%;
         z-index: 4;
     }
 }
 
 @media only screen and (max-width: 40em) {
-    #title {
+    .card-title {
         left: 2.5%;
         width: 40%;
     }
 
-    #description {
+    .card-description {
         left: 40%;
         width: 40%;
     }
 
-    #date {
+    .card-date {
         left: 60%;
         width: 40%;
     }
 
-    #shoe, #corner {
+    .card-shoe,
+    .card-corner {
         display: none;
     }
 
-    #invitation {
-        width: 100%;
+    .invitation {
         padding: 1.8em;
+        width: 100%;
     }
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for high resolution devices */
 }

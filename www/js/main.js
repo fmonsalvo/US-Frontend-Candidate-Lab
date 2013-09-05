@@ -11,7 +11,7 @@ $(function () {
           'You have accepted this invitation' :
           'You have rejected this invitation';
 
-    $('.rspv-message').hide();
+    $('.rspv-message').addClass('removed');
 
     acceptBtn
       .attr('disabled', accepted)
@@ -26,7 +26,7 @@ $(function () {
     setTimeout(function () {
       $('.rspv-message')
         .text(message)
-        .removeClass('hidden')
+        .removeClass('removed')
         .show();
 
       $('.invitation-button').removeClass('loading');
