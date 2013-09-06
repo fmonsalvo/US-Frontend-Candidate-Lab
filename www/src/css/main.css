@@ -264,6 +264,7 @@ form > button {
 }
 
 form > button:hover,
+form > button:focus,
 form > button.selected {
     background-color: #f78b36;
 }

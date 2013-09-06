@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
@@ -17,15 +17,15 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <section>
+        <header role="banner">
             <div class="card card-title">MDC Partners - Polaroid Celebration</div>
             <div class="card card-description">Book Signing &amp; Cocktail Hour of Instant - The Story of Polaroid by Author Christopher Bonanos.</div>
             <div class="card card-date">October 30th - The MDC Innovation Centre, 745 5th Ave., 19th Floor. From 6 to 8 or until the pictures get blurry</div>
             <div class="card card-shoe"></div>
             <div class="card card-corner"></div>
-        </section>
+        </header>
 
-        <section class="invitation">
+        <section class="invitation" role="main">
             <h1>Stop by for a minute.</h1>
 
             <p>Celebrate one of the most influential products of our time that for 60 years did what no other invention could do. Learn about the man behind the camera who influenced the likes of Steve Jobs and Instagram &amp; expose yourself to instant gratification by snapping a few candid shots of your own.</p>
@@ -33,8 +33,8 @@
             <div class="rspv-message {{removed}}">{{message}}</div>
 
             <form action="/rsvp" method="POST">
-                <button type="submit" name="response" value="true">Yes, I'm coming</button>
-                <button type="submit" name="response" value="false">No, not this time</button>
+                <button type="submit" name="response" value="true" role="button">Yes, I'm coming</button>
+                <button type="submit" name="response" value="false" role="button">No, not this time</button>
             </form>
         </section>
 
