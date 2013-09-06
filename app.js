@@ -15,14 +15,13 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'hbs');
 app.engine('handlebars', hbs.__express);
-hbs.registerPartials(__dirname + '/views/partials');
 
 // app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'www/public')));
 
 // development only
 if ('development' == app.get('env')) {

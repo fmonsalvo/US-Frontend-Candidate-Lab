@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "rsvp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,6 +7,19 @@
   },
   "dependencies": {
     "express": "3.2.0",
-    "jade": "*"
+    "jade": "*",
+    "hbs": "*"
+  },
+  "devDependencies": {
+    "jade": "~0.35.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib-handlebars": "~0.5.10",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-css": "~0.5.4",
+    "grunt-arialinter": "~0.1.6",
+    "grunt-contrib-copy": "~0.4.1"
   }
 }
