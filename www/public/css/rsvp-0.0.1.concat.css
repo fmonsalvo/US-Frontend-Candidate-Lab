@@ -304,18 +304,14 @@ form > button.selected {
     width: 100%;
 }
 
-.spinner {
+.loading:before {
+    content: '';
     background: url('../img/spinner.gif') no-repeat;
     background-size: 16px;
-    display: none;
     float: left;
     height: 16px;
     margin-right: 6px;
     width: 16px;
-}
-
-.loading .spinner {
-    display: block;
 }
 
 /* ==========================================================================
