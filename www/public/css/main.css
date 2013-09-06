@@ -1,3 +1,14 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
 
 html,
 button,
@@ -6,19 +17,18 @@ select,
 textarea {
     color: #222;
 }
+
 body {
     font-size: 1em;
     line-height: 1.4;
 }
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+
+/*
+ * A better looking default horizontal rule
+ */
+
 hr {
+    box-sizing: border-box;
     display: block;
     height: 1px;
     border: 0;
@@ -26,43 +36,84 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
+
+/*
+ * Remove the gap between images and the bottom of theimage-replace containers: h5bp.com/i/440
+ */
+
 img {
     vertical-align: middle;
 }
+
+/*
+ * Remove default fieldset styles.
+ */
+
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
 textarea {
     resize: vertical;
 }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
 }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
 .image-replace {
     background-color: transparent;
     border: 0;
     overflow: hidden;
 }
-.lt-ie8 .image-replace {
 
+.lt-ie8 .image-replace {
+    /* IE 6/7 fallback */
     direction: ltr;
     text-indent: -9999px;
 }
+
 .image-replace:before {
     content: "";
     display: block;
     width: 0;
     height: 100%;
 }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
 .removed {
-    display: none !important;
+    display: none;
     visibility: hidden;
 }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
 .hidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -73,6 +124,12 @@ textarea {
     position: absolute;
     width: 1px;
 }
+
+/*
+ * Extends the .hidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
 .hidden.focusable:active,
 .hidden.focusable:focus {
     clip: auto;
@@ -82,25 +139,47 @@ textarea {
     position: static;
     width: auto;
 }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
 .invisible {
     visibility: hidden;
 }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
+
 .clearfix:after {
     clear: both;
 }
-.lt-ie8 .clearfix {
-    zoom: 1;
-}
+
+/* ==========================================================================
+   Default Screen styles.
+   ========================================================================== */
+
 body {
     background: url(../img/woodgrain.jpg) repeat;
     font-family: "Helvetica", "Arial", sans-serif;
     overflow-x: hidden;
 }
+
 .card {
     background-repeat: no-repeat;
     background-size: 100%;
@@ -108,6 +187,7 @@ body {
     position: absolute;
     text-indent: -9999px;
 }
+
 .card-title {
     background-image: url(../img/card-title.png);
     height: 290px;
@@ -116,6 +196,7 @@ body {
     width: 265px;
     z-index: 2;
 }
+
 .card-description {
     background-image: url(../img/card-description.png);
     height: 288px;
@@ -124,6 +205,7 @@ body {
     width: 263px;
     z-index: 1;
 }
+
 .card-date {
     background-image: url(../img/card-date.png);
     height: 295px;
@@ -131,6 +213,7 @@ body {
     top: 0.563em;
     width: 271px;
 }
+
 .card-shoe {
     background-image: url(../img/card-shoe.png);
     bottom: 0;
@@ -139,6 +222,7 @@ body {
     z-index: 1;
     width: 150px;
 }
+
 .card-corner {
     background-image: url(../img/card-corner.png);
     bottom: 1.875em;
@@ -147,6 +231,7 @@ body {
     z-index: 2;
     width: 63px;
 }
+
 .invitation {
     background-color: #fff;
     bottom: 0;
@@ -159,10 +244,12 @@ body {
     width: 46em;
     z-index: 8;
 }
+
 h1 {
     font-size: 1.875em;
     margin-bottom: 0.5em;
 }
+
 form > button {
     background-color: #393939;
     border: 0;
@@ -176,10 +263,13 @@ form > button {
     text-decoration: none;
     text-transform: uppercase;
 }
+
 form > button:hover,
-form > button.selected {
+form > button:focus,
+.selected {
     background-color: #f78b36;
 }
+
 .rspv-message {
     background: rgb(247, 139, 54);
     border-radius: 4px;
@@ -212,30 +302,37 @@ form > button.selected {
         bottom: inherit;
     }
 }
+
 @media only screen and (max-width: 50em) {
     .card-date {
         left: 65%;
         z-index: 4;
     }
 }
+
 @media only screen and (max-width: 40em) {
     .card-title {
         left: 2.5%;
         width: 40%;
     }
+
     .card-description {
         left: 40%;
         width: 40%;
     }
+
     .card-date {
         left: 60%;
         width: 40%;
     }
+
     .card-shoe,
     .card-corner {
         display: none;
     }
+
     .invitation {
+        box-sizing: border-box;
         padding: 1.8em;
         width: 100%;
     }

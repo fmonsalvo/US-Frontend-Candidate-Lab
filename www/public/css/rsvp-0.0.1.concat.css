@@ -24,26 +24,11 @@ body {
 }
 
 /*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
  * A better looking default horizontal rule
  */
 
 hr {
+    box-sizing: border-box;
     display: block;
     height: 1px;
     border: 0;
@@ -121,7 +106,7 @@ textarea {
  */
 
 .removed {
-    display: none !important;
+    display: none;
     visibility: hidden;
 }
 
@@ -183,15 +168,6 @@ textarea {
 
 .clearfix:after {
     clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.lt-ie8 .clearfix {
-    zoom: 1;
 }
 
 /* ==========================================================================
@@ -289,7 +265,8 @@ form > button {
 }
 
 form > button:hover,
-form > button.selected {
+form > button:focus,
+.selected {
     background-color: #f78b36;
 }
 
@@ -355,6 +332,7 @@ form > button.selected {
     }
 
     .invitation {
+        box-sizing: border-box;
         padding: 1.8em;
         width: 100%;
     }

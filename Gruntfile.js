@@ -63,6 +63,16 @@ module.exports = function(grunt) {
       }
     },
 
+    csslint: {
+      lax: {
+        rules: {
+          'box-sizing': false,
+          'adjoining-classes': false
+        },
+        src: [PATH_ASSETS + '/css/*.css', '!' + PATH_ASSETS + '/css/normalize.css']
+      }
+    },
+
     arialinter: {
       files: [
         PATH_ASSETS + '/js/app/**/*.hbs'
@@ -111,6 +121,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-css');
   // grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -120,6 +131,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'build:dev');
 
   //build tasks
-  grunt.registerTask('build:prod', ['clean', 'arialinter', 'jshint:all', 'requirejs', 'concat', 'cssmin', 'imagemin']);
-  grunt.registerTask('build:dev', ['clean', 'copy', 'arialinter', 'jshint:all', 'concat', 'cssmin']);
+  grunt.registerTask('build:prod', ['clean', 'arialinter', 'jshint:all', 'csslint:lax', 'requirejs', 'concat', 'cssmin', 'imagemin']);
+  grunt.registerTask('build:dev', ['clean', 'copy', 'arialinter', 'jshint:all', 'csslint:lax', 'concat', 'cssmin']);
 };

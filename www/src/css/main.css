@@ -28,6 +28,7 @@ body {
  */
 
 hr {
+    box-sizing: border-box;
     display: block;
     height: 1px;
     border: 0;
@@ -105,7 +106,7 @@ textarea {
  */
 
 .removed {
-    display: none !important;
+    display: none;
     visibility: hidden;
 }
 
@@ -265,7 +266,7 @@ form > button {
 
 form > button:hover,
 form > button:focus,
-form > button.selected {
+.selected {
     background-color: #f78b36;
 }
 
@@ -331,6 +332,7 @@ form > button.selected {
     }
 
     .invitation {
+        box-sizing: border-box;
         padding: 1.8em;
         width: 100%;
     }
