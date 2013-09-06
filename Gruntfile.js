@@ -43,24 +43,6 @@ module.exports = function(grunt) {
       }
     },
 
-    //Precompile hbs files into app/template.js
-    //generates the template registry
-    handlebars: {
-      compile: {
-        options: {
-          namespace: 'JST',
-          amd: true,
-          processName: function(filename) {
-            var pieces = filename.split('/');
-            return pieces[pieces.length - 1];
-          }
-        },
-        files: {
-          PRECOMPILED_TPL_PATH : PATH_ASSETS + '/js/**/*.hbs'
-        }
-      }
-    },
-
     // js linting options
     jshint: {
       all: ['Gruntfile.js', PATH_ASSETS + '/js/main.js', PATH_ASSETS + '/js/app/**/*.js',
@@ -98,7 +80,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-css');
   // grunt.loadNpmTasks('grunt-karma');
@@ -108,6 +89,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'build:dev');
 
   //build tasks
-  grunt.registerTask('build:prod', ['clean', 'arialinter', 'jshint:all', 'handlebars', 'requirejs', 'concat', 'cssmin']);
-  grunt.registerTask('build:dev', ['clean', 'copy', 'arialinter', 'jshint:all', 'handlebars', 'concat', 'cssmin']);
+  grunt.registerTask('build:prod', ['clean', 'arialinter', 'jshint:all', 'requirejs', 'concat', 'cssmin']);
+  grunt.registerTask('build:dev', ['clean', 'copy', 'arialinter', 'jshint:all', 'concat', 'cssmin']);
 };
