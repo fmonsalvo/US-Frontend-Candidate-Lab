@@ -18,14 +18,6 @@ require.config({
     'modernizr': {
       exports: 'Modernizr'
     },
-    'enquire': {
-      deps: ['jquery'],
-      exports: 'enquire'
-    },
-    'jqueryAccordion': {
-      deps: ['jquery'],
-      exports: 'jqueryAccordion'
-    },
     'handlebars': {
       exports : 'Handlebars'
     }

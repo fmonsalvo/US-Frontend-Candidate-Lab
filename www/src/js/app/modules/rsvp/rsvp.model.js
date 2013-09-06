@@ -8,7 +8,7 @@ define(
     var RsvpModel = Backbone.Model.extend({
       url: 'rsvp',
 
-      hasAccepted: function() {
+      isAccepted: function() {
         return this.get('response') === 'true';
       }
 
