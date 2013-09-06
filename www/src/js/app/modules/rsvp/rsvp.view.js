@@ -20,7 +20,7 @@ define(
           $buttons;
 
         this.model.set('response', $(e.currentTarget).attr('value'));
-        accepted = this.model.hasAccepted();
+        accepted = this.model.isAccepted();
 
         //show spinner & disable button
         this.$el.find('button[value=true]')

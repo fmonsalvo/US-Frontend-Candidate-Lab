@@ -30,7 +30,7 @@
 
             <p>Celebrate one of the most influential products of our time that for 60 years did what no other invention could do. Learn about the man behind the camera who influenced the likes of Steve Jobs and Instagram &amp; expose yourself to instant gratification by snapping a few candid shots of your own.</p>
 
-            <div class="rspv-message {{removed}}">{{message}}</div>
+            <div class="rspv-message {{#if hideMessage}}removed{{/if}}">{{message}}</div>
 
             <form action="/rsvp" method="POST">
                 <button type="submit" name="response" value="true">YES</button>
