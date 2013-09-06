@@ -4,7 +4,6 @@ require.config({
     'backbone' : 'vendor/backbone/backbone',
     'jquery' : 'vendor/jquery/jquery-1.10.2',
     'underscore' : 'vendor/lodash/lodash',
-    'handlebars' : 'vendor/handlebars/handlebars',
     'modernizr' : 'vendor/modernizr/modernizr',
     'templateregistry' : 'app/templates',
   },
@@ -17,9 +16,6 @@ require.config({
     },
     'modernizr': {
       exports: 'Modernizr'
-    },
-    'handlebars': {
-      exports : 'Handlebars'
     }
   },
   waitSeconds: 30
@@ -27,7 +23,8 @@ require.config({
 
 require(
   [
-    'app/router'
+    'app/router',
+    'modernizr'
   ],
   function(Router) {
     'use strict';
