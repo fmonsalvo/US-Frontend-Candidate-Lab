@@ -32,7 +32,7 @@
 
             <div class="rspv-message {{#if hideMessage}}removed{{/if}}">{{message}}</div>
 
-            <form action="/rsvp" method="POST">
+            <form action="/rsvp" method="POST" id="rsvpForm">
                 <button type="submit" name="response" value="true" role="button">Yes, I'm coming</button>
                 <button type="submit" name="response" value="false" role="button">No, not this time</button>
             </form>

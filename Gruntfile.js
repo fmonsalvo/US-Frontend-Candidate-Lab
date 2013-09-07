@@ -73,16 +73,6 @@ module.exports = function(grunt) {
       }
     },
 
-    arialinter: {
-      files: [
-        PATH_ASSETS + '/js/app/**/*.hbs'
-      ],
-      options: {
-        templates: true,
-        levels: 'A'
-      }
-    },
-
     imagemin: {
       png: {
         options: {
@@ -123,7 +113,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-css');
-  // grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-arialinter');
 
@@ -131,6 +120,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'build:dev');
 
   //build tasks
-  grunt.registerTask('build:prod', ['clean', 'arialinter', 'jshint:all', 'csslint:lax', 'requirejs', 'concat', 'cssmin', 'imagemin']);
-  grunt.registerTask('build:dev', ['clean', 'copy', 'arialinter', 'jshint:all', 'csslint:lax', 'concat', 'cssmin']);
+  grunt.registerTask('build:prod', ['clean', 'jshint:all', 'csslint:lax', 'requirejs', 'concat', 'cssmin', 'imagemin']);
+  grunt.registerTask('build:dev', ['clean', 'copy', 'jshint:all', 'csslint:lax', 'concat', 'cssmin']);
 };
